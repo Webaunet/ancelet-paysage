@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Ancelet Paysage, Longnes</title>
+<meta name="description" content="Contactez Ancelet Paysage à Longnes (78) pour un projet de jardin : téléphone, adresse et formulaire de demande de devis.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="images/favicon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="w bar">
+    <a class="logo" href="https://webaunet.github.io/ancelet-paysage/" aria-label="Ancelet Paysage, retour à l'accueil"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3C9 9 6 21 12 31c3 5 8 6 8 6s5-1 8-6c6-10 3-22-8-28z" fill="#173a2e"/><path d="M20 12v24M20 22l-6-5M20 27l6-5" stroke="#d9a23b" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg><span><b>Ancelet</b><small>PAYSAGE</small></span></a>
+    <nav id="menu" aria-label="Navigation principale"><ul><li><a href="index.html">Accueil</a></li><li><a href="prestations.html">Prestations</a></li><li><a href="contact.html" aria-current="page">Contact</a></li></ul></nav>
+    <a class="btn tel" href="tel:+33650363030" aria-label="Appeler le 06 50 36 30 30">&#9990;<span class="num">&nbsp;06 50 36 30 30</span></a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+  </div>
+</header>
+<main>
+  <section class="ph"><div class="w">
+    <div><span class="eyebrow">Contact</span><h1>Un projet de jardin à Longnes ?</h1>
+      <p>Appelez-nous, ou remplissez le formulaire : vous obtenez un message prêt à envoyer par SMS.</p>
+      <a class="bigtel" href="tel:+33650363030">06 50 36 30 30</a></div>
+    <div class="arche" style="max-width:380px;justify-self:center"><img src="images/taille-haies.jpg" width="1200" height="896" alt="Jardinier équipé d'un casque anti-bruit qui taille une haie" style="object-position:40% 50%"></div></div></section>
+  <section class="band court menthe"><div class="w formgrid">
+    <div><h2 style="margin-bottom:24px">Décrivez votre demande</h2>
+      <form id="form" class="fcard" novalidate>
+        <p class="fintro">Tous les champs sont obligatoires.</p>
+        <div class="row">
+          <label for="nom">Nom et prénom<input id="nom" name="nom" autocomplete="name" required aria-describedby="e-nom"><span class="err" id="e-nom" role="alert"></span></label>
+          <label for="tel">Téléphone<input id="tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" required aria-describedby="e-tel"><span class="err" id="e-tel" role="alert"></span></label>
+        </div>
+        <div class="row">
+          <label for="commune">Commune du jardin<input id="commune" name="commune" autocomplete="address-level2" required aria-describedby="e-commune"><span class="err" id="e-commune" role="alert"></span></label>
+          <label for="type">Type de travaux<select id="type" name="type" required aria-describedby="e-type"><option value="">Choisir…</option><option>Création de jardin</option><option>Plantations</option><option>Taille de haies et d'arbustes</option><option>Entretien (tonte, désherbage)</option><option>Autre</option></select><span class="err" id="e-type" role="alert"></span></label>
+        </div>
+        <label for="msg">Votre projet<textarea id="msg" name="msg" required aria-describedby="e-msg"></textarea><span class="err" id="e-msg" role="alert"></span></label>
+        <button class="btn big" type="submit">Préparer ma demande</button>
+      </form></div>
+    <div>
+      <div class="recap" id="recap" hidden aria-live="polite">
+        <h3>Votre demande est prête</h3>
+        <pre id="recap-txt"></pre>
+        <div class="actions">
+          <a class="btn" id="b-sms" href="#">Envoyer par SMS</a>
+          <button class="btn ghost" type="button" id="b-copy">Copier</button>
+          <a class="btn ghost" href="tel:+33650363030">Appeler</a>
+        </div>
+        <div class="ok" id="ok" role="status"></div>
+      </div>
+      <div id="avant" class="head" style="margin:0 0 24px"><span class="eyebrow">Comment ça marche</span><p>Ce site est une maquette : le formulaire ne s'envoie pas tout seul. Une fois rempli, il prépare votre message, que vous envoyez d'un clic par SMS ou que vous copiez.</p></div>
+      <address class="coord">
+        <div><small>Téléphone</small><a href="tel:+33650363030">06 50 36 30 30</a></div>
+        <div><small>Adresse</small>4 B, rue de Bréval<br>78980 Longnes</div>
+      </address>
+    </div></div></section>
+</main>
+<footer>
+  <div class="w">
+    <span>Ancelet Paysage · 4 B, rue de Bréval, 78980 Longnes · 06 50 36 30 30</span>
+    <span><a href="index.html">Accueil</a> · <a href="prestations.html">Prestations</a> · <a href="contact.html">Contact</a> · <a href="mentions-legales.html">Mentions légales</a></span>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

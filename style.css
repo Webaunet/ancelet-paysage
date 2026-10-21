@@ -1,8 +1,3 @@
-<title>Ancelet Paysage</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<meta name="robots" content="noindex, nofollow">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;600;700&display=swap">
-<style>
 /* Concept : fenêtres en arche (portail de jardin) sur fond sapin, accent ocre, sections franches alternées */
 :root{
   --sapin:#173a2e; --sapin-2:#0f2a21; --ocre:#d9a23b; --ocre-fonce:#a9731a; --menthe:#e8eee6; --craie:#fafbf8; --texte:#1d2a24; --doux:#47564d;
@@ -99,97 +94,54 @@ footer .w{display:flex;flex-wrap:wrap;gap:8px 28px;align-items:center;justify-co
   .band{min-height:0;padding-block:64px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style>
 
-<header>
-  <div class="w bar">
-    <a class="logo" href="#accueil" aria-label="Ancelet Paysage, retour à l'accueil">
-      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3C9 9 6 21 12 31c3 5 8 6 8 6s5-1 8-6c6-10 3-22-8-28z" fill="#173a2e"/><path d="M20 12v24M20 22l-6-5M20 27l6-5" stroke="#d9a23b" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg>
-      <span><b>Ancelet</b><small>PAYSAGE</small></span>
-    </a>
-    <nav id="menu" aria-label="Navigation principale">
-      <ul>
-        <li><a href="#accueil" aria-current="page">Accueil</a></li>
-        <li><a href="#prestations">Prestations</a></li>
-        <li><a href="#approche">Notre approche</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <a class="btn tel" href="tel:+33650363030" aria-label="Appeler le 06 50 36 30 30">&#9990;<span class="num">&nbsp;06 50 36 30 30</span></a>
-    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span></button>
-  </div>
-</header>
-
-<main id="accueil">
-  <section class="hero">
-    <div class="w">
-      <div>
-        <span class="eyebrow">Paysagiste · Longnes (78)</span>
-        <h1>Des jardins qui vous ressemblent, et qui durent.</h1>
-        <p>Ancelet Paysage est paysagiste à Longnes, dans les Yvelines. Création, plantations et entretien : un jardin suivi du premier plan au dernier coup de sécateur.</p>
-        <div class="cta"><a class="btn" href="#contact">Demander un devis</a><a class="btn ghost" href="#prestations">Voir les prestations</a></div>
-      </div>
-      <div class="arche"><img src="images/entretien.jpg" width="1408" height="768" alt="Jardin soigné avec pelouse tondue, massifs fleuris et allée gravillonnée devant une maison en pierre"></div>
-    </div>
-  </section>
-  <div class="arrondi" aria-hidden="true"></div>
-
-  <section class="band menthe" id="prestations" style="padding-top:40px">
-    <div class="w">
-      <div class="head"><span class="eyebrow">Prestations</span><h2>Créer, planter, entretenir</h2><p>Du projet de jardin à son entretien régulier : les travaux d'un paysagiste pour vos extérieurs.</p></div>
-      <div class="grid">
-        <article class="carte"><div class="arche"><img loading="lazy" src="images/espace-vert.jpg" width="1408" height="768" alt="Création d'un massif et d'une pelouse aux courbes douces devant une maison moderne"></div><h3>Création de jardins</h3><p>Massifs, pelouse et cheminements dessinés pour votre terrain.</p></article>
-        <article class="carte"><div class="arche"><img loading="lazy" src="images/plantation.jpg" width="1400" height="764" alt="Jardinier qui plante des vivaces dans un massif"></div><h3>Plantations</h3><p>Arbustes, vivaces et haies plantés au bon endroit.</p></article>
-        <article class="carte"><div class="arche"><img loading="lazy" src="images/taille-arbustes.jpg" width="1408" height="768" alt="Jardinier qui taille une haie au taille-haie devant une maison"></div><h3>Taille et haies</h3><p>Haies et arbustes taillés proprement, coupes ramassées.</p></article>
-        <article class="carte"><div class="arche"><img loading="lazy" src="images/entretien-general.jpg" width="1376" height="768" alt="Jardinier qui tond une pelouse devant une maison en pierre"></div><h3>Entretien du jardin</h3><p>Tonte, désherbage et remise en ordre tout au long de l'année.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="band sapin" id="approche">
-    <div class="w approche">
-      <div class="photo"><img loading="lazy" src="images/conception.jpg" width="1408" height="768" alt="Plan de jardin affiché sur une tablette, discuté autour d'une table de jardin"></div>
-      <div>
-        <span class="eyebrow">Notre approche</span>
-        <h2 style="margin-top:12px">Un jardin pensé avec vous</h2>
-        <ol class="points">
-          <li><span class="num">1</span><div><strong>Vous nous expliquez</strong><p>Votre terrain, vos habitudes, ce que vous attendez de votre extérieur.</p></div></li>
-          <li><span class="num">2</span><div><strong>Nous proposons</strong><p>Un projet clair, discuté avec vous avant le début des travaux.</p></div></li>
-          <li><span class="num">3</span><div><strong>Nous réalisons et suivons</strong><p>Les travaux, puis l'entretien si vous souhaitez garder la main légère.</p></div></li>
-        </ol>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <div class="w box">
-      <div>
-        <span class="eyebrow">Contact</span>
-        <h2 style="margin-top:12px">Parlons de votre jardin</h2>
-        <p>Appelez-nous pour décrire votre projet ou prendre rendez-vous. Nous vous répondons et fixons ensemble la suite.</p>
-        <div class="cta"><a class="btn" href="tel:+33650363030">Appeler le 06 50 36 30 30</a></div>
-      </div>
-      <address class="coord">
-        <div><small>Téléphone</small><a href="tel:+33650363030">06 50 36 30 30</a></div>
-        <div><small>Adresse</small>4 B, rue de Bréval<br>78980 Longnes</div>
-      </address>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="w">
-    <span>Ancelet Paysage · 4 B, rue de Bréval, 78980 Longnes · 06 50 36 30 30</span>
-    <span>Maquette de démonstration</span>
-  </div>
-</footer>
-
-<script>
-(function(){
-  var b=document.getElementById('burger'),m=document.getElementById('menu');
-  function set(o){m.classList.toggle('open',o);b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu')}
-  b.addEventListener('click',function(){set(!m.classList.contains('open'))});
-  m.addEventListener('click',function(e){if(e.target.closest('a'))set(false)});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});
-})();
-</script>
+/* pages internes */
+.ph{background:var(--sapin);color:#fff;padding-block:64px 88px;border-radius:0 0 56px 56px;position:relative;z-index:2}
+.ph .w{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center}
+.ph p{color:#dbe6dd;margin:16px 0 0;max-width:32em}
+.ph .eyebrow{color:var(--ocre)}
+.mosaic{display:grid;grid-template-columns:1.2fr 1fr;grid-template-rows:1fr 1fr;gap:12px;aspect-ratio:4/3.2}
+.mosaic img{width:100%;height:100%;object-fit:cover}
+.mosaic img:first-child{grid-row:span 2;border-radius:999px 999px 14px 14px}
+.mosaic img:nth-child(2){border-radius:14px 14px 14px 80px}
+.mosaic img:nth-child(3){border-radius:80px 14px 14px 14px}
+.bigtel{display:block;font-family:var(--f-titre);font-weight:800;font-size:clamp(1.9rem,5vw,3rem);text-decoration:none;margin-top:20px;overflow-wrap:anywhere;color:var(--ocre)}
+.bigtel:hover{color:#fff}
+.detail{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.detail.rev>:first-child{order:2}
+.detail .photo{border-radius:14px 14px 14px 140px;overflow:hidden;aspect-ratio:4/3}
+.detail.rev .photo{border-radius:14px 14px 140px 14px}
+.detail .photo img{width:100%;height:100%;object-fit:cover}
+.liste{margin:22px 0 0;padding:0;list-style:none;display:grid;gap:14px}
+.liste li{padding-left:30px;position:relative;color:var(--doux)}
+.liste li::before{content:"";position:absolute;left:0;top:.45em;width:14px;height:14px;border-radius:50% 50% 50% 0;background:var(--ocre);transform:rotate(-45deg)}
+.liste strong{color:var(--texte)}
+.sapin .liste li{color:#cfdcd2}.sapin .liste strong{color:#fff}
+.band.court{min-height:0}
+.fcard{background:#fff;border-radius:18px;padding:36px;box-shadow:0 18px 40px -22px rgba(15,42,33,.5);border-top:6px solid var(--ocre);display:grid;gap:22px}
+.fintro{margin:0;color:var(--doux)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.fcard label{font-weight:700;display:grid;gap:8px;align-content:start}
+.fcard input,.fcard select,.fcard textarea{font:inherit;font-weight:400;padding:12px 14px;border:2px solid #cfd8cc;border-radius:12px;background:var(--craie);color:var(--texte);min-height:52px;width:100%;transition:border-color .15s,box-shadow .15s,background .15s}
+.fcard textarea{min-height:140px;resize:vertical}
+.fcard input:hover,.fcard select:hover,.fcard textarea:hover{border-color:var(--ocre)}
+.fcard input:focus-visible,.fcard select:focus-visible,.fcard textarea:focus-visible{outline:none;border-color:var(--sapin);background:#fff;box-shadow:0 0 0 4px rgba(217,162,59,.4)}
+.fcard select{appearance:none;padding-right:44px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%23173a2e' stroke-width='2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center}
+.err{color:#9b1c1c;font-weight:600}.err:empty{display:none}
+.fcard [aria-invalid="true"]{border-color:#9b1c1c;background:#fdf3f3}
+.btn.big{min-height:56px;font-size:1.05rem;width:100%}
+.btn.sapinbtn{background:var(--sapin);border-color:var(--sapin);color:#fff}.btn.sapinbtn:hover{background:var(--sapin-2)}
+.recap{background:var(--sapin-2);color:#fff;border-radius:18px;padding:28px;display:grid;gap:16px}
+.recap pre{margin:0;white-space:pre-wrap;font:inherit;background:rgba(255,255,255,.08);padding:16px;border-radius:12px;overflow-wrap:anywhere}
+.actions{display:flex;flex-wrap:wrap;gap:10px}
+.ok{color:var(--ocre);font-weight:700;min-height:1.5em}
+.formgrid{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:start}
+.legal{max-width:760px}
+.legal h2{font-size:1.5rem;margin:40px 0 12px}
+.legal p{color:var(--doux)}
+.legal .manque{background:var(--menthe);padding:14px 18px;border-radius:12px;color:var(--texte)}
+[hidden]{display:none!important}
+.menthe .coord{background:var(--sapin-2);color:#fff}.menthe .coord small{color:var(--ocre)}
+@media(max-width:860px){.ph .w,.detail,.formgrid{grid-template-columns:1fr;gap:32px}.detail.rev>:first-child{order:0}}
+@media(max-width:560px){.row{grid-template-columns:1fr}.fcard{padding:24px 20px}}
+.ph+.band{margin-top:-56px;padding-top:144px}
