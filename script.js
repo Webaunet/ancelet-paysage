@@ -1,4 +1,11 @@
 (function(){
+  var rv=document.querySelectorAll('.rv,.carte,.points li');
+  if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    document.documentElement.classList.add('js');
+    rv.forEach(function(e){e.classList.add('rv')});
+    var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    rv.forEach(function(e){io.observe(e)});
+  }
   var b=document.getElementById('burger'),m=document.getElementById('menu');
   function set(o){m.classList.toggle('open',o);b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu')}
   b.addEventListener('click',function(){set(!m.classList.contains('open'))});

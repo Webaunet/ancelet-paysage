@@ -2,7 +2,7 @@
 """Génère les pages HTML du site Ancelet Paysage (maquette). Usage : python3 outils/build.py"""
 BASE="https://webaunet.github.io/ancelet-paysage/"
 TEL="06 50 36 30 30"; TELL="+33650363030"
-PAGES=[("index.html","Accueil"),("prestations.html","Prestations"),("contact.html","Contact")]
+PAGES=[("index.html","Accueil"),("prestations.html","Prestations"),("conseils.html","Conseils"),("contact.html","Contact")]
 LOGO='<svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3C9 9 6 21 12 31c3 5 8 6 8 6s5-1 8-6c6-10 3-22-8-28z" fill="#173a2e"/><path d="M20 12v24M20 22l-6-5M20 27l6-5" stroke="#d9a23b" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg>'
 def head(t,d):
     return f'''<!doctype html>
@@ -33,7 +33,7 @@ def header(cur):
 FOOT=f'''<footer>
   <div class="w">
     <span>Ancelet Paysage · 4 B, rue de Bréval, 78980 Longnes · {TEL}</span>
-    <span><a href="index.html">Accueil</a> · <a href="prestations.html">Prestations</a> · <a href="contact.html">Contact</a> · <a href="mentions-legales.html">Mentions légales</a></span>
+    <span><a href="index.html">Accueil</a> · <a href="prestations.html">Prestations</a> · <a href="conseils.html">Conseils</a> · <a href="contact.html">Contact</a> · <a href="mentions-legales.html">Mentions légales</a></span>
   </div>
 </footer>
 <script src="script.js"></script>
@@ -44,6 +44,15 @@ def page(fn,t,d,cur,body):
     open(fn,"w",encoding="utf-8").write(head(t,d)+header(cur)+"<main>\n"+body+"\n</main>\n"+FOOT)
 def carte(img,w,h,alt,t,p):
     return f'<article class="carte"><div class="arche"><img loading="lazy" src="images/{img}" width="{w}" height="{h}" alt="{alt}"></div><h3>{t}</h3><p>{p}</p></article>'
+IC={
+"printemps":'<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 40V22" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M24 26c-9 0-12-7-12-13 9 0 12 5 12 13zM24 22c0-8 4-12 12-12 0 8-4 12-12 12z" fill="currentColor"/></svg>',
+"ete":'<svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="8" fill="currentColor"/><path d="M24 5v6M24 37v6M5 24h6M37 24h6M10.5 10.5l4.2 4.2M33.3 33.3l4.2 4.2M10.5 37.5l4.2-4.2M33.3 14.7l4.2-4.2" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>',
+"automne":'<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6C12 12 8 24 16 34c3 4 8 6 8 6s5-2 8-6c8-10 4-22-8-28z" fill="currentColor"/><path d="M24 14v28" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg>',
+"hiver":'<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5v38M7.5 14.5l33 19M40.5 14.5l-33 19" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="24" cy="24" r="3.5" fill="currentColor"/></svg>'}
+SAISONS=[("printemps","Printemps","s-pr",["Reprendre la tonte dès que l'herbe pousse.","Planter les vivaces et les arbustes.","Désherber les massifs avant que les herbes ne s'installent.","Pailler pour garder l'humidité du sol."]),
+("ete","Été","s-et",["Arroser tôt le matin ou en fin de journée.","Tondre un peu plus haut pour protéger la pelouse.","Pailler les massifs pour limiter l'évaporation.","Tailler les haies hors des fortes chaleurs."]),
+("automne","Automne","s-au",["Ramasser les feuilles avant qu'elles étouffent la pelouse.","Planter arbres et arbustes, le sol est encore tiède.","Tailler les haies de fin de saison.","Composter ou évacuer les déchets verts."]),
+("hiver","Hiver","s-hi",["Éviter de piétiner un sol gelé ou détrempé.","Protéger les plantes frileuses.","Tailler les arbres au repos.","Préparer les projets de l'année à venir."])]
 COORD=f'''<address class="coord">
         <div><small>Téléphone</small><a href="tel:{TELL}">{TEL}</a></div>
         <div><small>Adresse</small>4 B, rue de Bréval<br>78980 Longnes</div>
@@ -64,6 +73,11 @@ home=f'''  <section class="hero"><div class="w">
       {carte("taille-arbustes.jpg",1408,768,"Jardinier qui taille une haie au taille-haie devant une maison","Taille et haies","Haies et arbustes taillés proprement, coupes ramassées.")}
       {carte("entretien-general.jpg",1376,768,"Jardinier qui tond une pelouse devant une maison en pierre","Entretien du jardin","Tonte, désherbage et remise en ordre tout au long de l'année.")}
     </div></div></section>
+  <section class="band craie" id="saisons"><div class="w">
+    <div class="head"><span class="eyebrow">Au fil des saisons</span><h2>Chaque saison a ses gestes</h2><p>Quelques repères simples pour un jardin en bonne santé, de la tonte du printemps aux plantations d'automne.</p></div>
+    <div class="saisons">{"".join(f'<div class="saison {c} rv"><span class="pastille">{IC[k]}</span><h3>{n}</h3><p>{l[0]}</p></div>' for k,n,c,l in SAISONS)}</div>
+    <div class="cta" style="margin-top:36px"><a class="btn sapinbtn" href="conseils.html">Lire les conseils du jardinier</a></div>
+  </div></section>
   <section class="band sapin" id="approche"><div class="w approche">
     <div class="photo"><img loading="lazy" src="images/conception.jpg" width="1408" height="768" alt="Plan de jardin affiché sur une tablette, discuté autour d'une table de jardin"></div>
     <div><span class="eyebrow">Notre approche</span><h2 style="margin-top:12px">Un jardin pensé avec vous</h2>
@@ -107,6 +121,29 @@ prest=f'''  <section class="ph"><div class="w">
       <div class="cta"><a class="btn" href="contact.html">Demander un devis</a></div></div>
     <div class="arche" style="max-width:380px;justify-self:center"><img loading="lazy" src="images/tonte.jpg" width="1376" height="768" alt="Jardinier qui tond une pelouse près d'une maison aux volets bleus" style="object-position:62% 50%"></div></div></section>'''
 page("prestations.html","Prestations | Ancelet Paysage, Longnes","Création de jardins, plantations, taille de haies, tonte et évacuation des déchets verts : les prestations d'Ancelet Paysage à Longnes (78).","prestations.html",prest)
+
+cons=f'''  <section class="ph"><div class="w">
+    <div><span class="eyebrow">Conseils du jardinier</span><h1>Un jardin en forme, saison après saison</h1>
+      <p>Des repères généraux pour entretenir votre jardin tout au long de l'année. Chaque terrain est différent : pour un avis sur le vôtre, parlons-en.</p>
+      <div class="cta"><a class="btn" href="#saisons">Voir les saisons</a><a class="btn ghost" href="contact.html">Nous contacter</a></div></div>
+    <div class="arche" style="max-width:380px;justify-self:center"><img src="images/feuilles.jpg" width="1400" height="764" alt="Jardinier qui ratisse des feuilles mortes autour d'un massif" style="object-position:35% 50%"></div></div></section>
+  <section class="band craie" id="saisons"><div class="w">
+    <div class="head"><span class="eyebrow">Les quatre saisons</span><h2>Que faire, et quand</h2><p>Des conseils généraux, à adapter selon votre sol, votre exposition et vos plantations.</p></div>
+    <div class="saisons grand">{"".join(f'<article class="saison {c} rv"><span class="pastille">{IC[k]}</span><h3>{n}</h3><ul class="liste">'+"".join(f"<li>{t}</li>" for t in l)+'</ul></article>' for k,n,c,l in SAISONS)}</div>
+  </div></section>
+  <section class="band sapin"><div class="w detail">
+    <div><span class="eyebrow">Toute l'année</span><h2 style="margin-top:12px">Trois habitudes qui font la différence</h2>
+      <ul class="liste">
+        <li><strong>Observer.</strong> Un coup d'œil régulier au jardin permet d'agir avant que les problèmes s'installent.</li>
+        <li><strong>Pailler.</strong> Un sol couvert garde l'humidité et limite les herbes indésirables.</li>
+        <li><strong>Garder les outils propres et affûtés.</strong> Une coupe nette cicatrise mieux sur les arbustes et les haies.</li>
+      </ul></div>
+    <div class="photo"><img loading="lazy" src="images/plantation.jpg" width="1400" height="764" alt="Jardinier qui plante des vivaces dans un massif"></div></div></section>
+  <section class="contact"><div class="w box">
+    <div><span class="eyebrow">Une question sur votre jardin ?</span><h2 style="margin-top:12px">Demandez conseil</h2><p>Décrivez votre terrain et ce qui vous pose problème : nous en discutons ensemble.</p>
+      <div class="cta"><a class="btn" href="contact.html">Poser ma question</a></div></div>
+    {COORD}</div></section>'''
+page("conseils.html","Conseils du jardinier | Ancelet Paysage, Longnes","Conseils généraux d'entretien du jardin par saison : tonte, plantations, taille, arrosage et paillage, par Ancelet Paysage à Longnes (78).","conseils.html",cons)
 
 cont=f'''  <section class="ph"><div class="w">
     <div><span class="eyebrow">Contact</span><h1>Un projet de jardin à Longnes ?</h1>
